@@ -1,0 +1,63 @@
+@import './custom_colors.scss';
+
+.notes {
+      
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    height: calc(100% - 70px);
+};
+
+.navbar-item {
+    margin-top: 8px;
+}
+
+.bm-menu {
+    background-color: white;
+    padding-top: 10px;
+
+    .is-active .columns.is-mobile{
+        background-color: $custom-grey;
+        border-left: 5px solid $custom-purple;
+        border-radius: 5px;
+    }
+    .columns.is-mobile {
+        border-bottom: 5px $custom-grey solid;
+        border-radius: 5px;
+
+        .is-6.title {
+            margin-top: 10px;
+        }
+    }
+}
+
+.is-mobile:hover {
+    border-bottom: 5px solid $custom-purple;
+}
+
+.notes-list {
+    margin-bottom: 4rem;
+}
+
+.tag.is-dark {
+    margin-bottom: 10px;
+}
+
+.column-trash:hover .trash {
+    color: $custom-purple;
+}
+.trash {
+    padding: 0px;
+}
+.trash:hover {
+    color: $custom-purple;
+}
+
+.notes-editor {
+    padding: 0px;
+    height: calc(100% - 43px);
+
+     .quill {
+        height: 100%;
+    } 
+}
