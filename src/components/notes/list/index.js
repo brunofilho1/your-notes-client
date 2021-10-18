@@ -41,7 +41,7 @@ function ListNotes(props) {
                   <Column size={10}>
                 <Title size={6}>
 
-                  {item.title.replace(/(<([^>]+)>)/ig, "").substring(0,20)}
+                  {item.title.replace(/(<([^>]+)>)/ig, "").substring(0,25)}
                 </Title>
                 <Title size={6} subtitle spaced={false}>
                   {item.body.replace(/(<([^>]+)>)/ig, "").substring(0,30)}

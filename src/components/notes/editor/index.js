@@ -1,25 +1,29 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
+import {Input} from 'rbx';
 
-function Editor(props) {
+function Editor({note, updateNote}) {
+  const [currentTitle, setCurrentTitle] = useState('');
   const [currentContent, setCurrentContent] = useState('');
   const [timer, setTimer] = useState(null);
 
-  useEffect(()=> {
-    setCurrentContent(props.note.body)
-  }, [props.note])
+  useEffect(() => {
+    setCurrentTitle(note.title);
+    setCurrentContent(note.body);
+  }, [note]);
 
-  const updateNote = (content) => {
-    const title = content.replace(/(<([^>]+)>)/ig, "").slice(0, 30);
-    props.updateNote(props.note, {'title': title, 'body': content})
+  function handleUpdate(title, body) {
+    updateNote(note, { title, body });
   }
 
-  const handleChange = (content, delta, source) =>{
+  function handleChange(content, delta, source) {
     clearTimeout(timer);
-    if(source == 'user'){
-      setCurrentContent(content)
-      setTimer(setTimeout(() => updateNote(content), 5000))
+    if (source === 'user') {
+      setCurrentContent(content);
+      setTimer(setTimeout(() => {
+        handleUpdate(currentTitle, content);
+      }, 1000));
     }
   }
 
@@ -36,6 +40,20 @@ function Editor(props) {
 
   return (
     <Fragment>
+      <Input
+        color="light"
+        placeholder="Insert a Title..."
+        rounded={false}
+        size="large"
+        value={currentTitle}
+        onChange={(e) => {
+          clearTimeout(timer);
+          setCurrentTitle(e.target.value);
+          setTimer(setTimeout(() => {
+            handleUpdate(e.target.value, currentContent);
+          }, 1000));
+        }}
+      />
       <ReactQuill value={currentContent} onChange={handleChange} modules={modules}/>
     </Fragment>
   )
