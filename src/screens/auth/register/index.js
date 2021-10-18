@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import Header from '../../../components/header';
 import {Column, Section, Title, Container, Card} from 'rbx';
-import logoImage from '../../../assets/images/logo.png';
+import logoImage from '../../../assets/images/yourNotes-logo.png';
 import '../../../styles/auth.scss';
 import RegisterForm from '../../../components/auth/register_form'
 
@@ -19,7 +19,7 @@ const RegisterScreen = () => {
 
                                     <Section>
                                         <Column.Group centered>
-                                            <Column size={10}>
+                                            <Column size={8}>
                                             <img src={logoImage}/>
                                             </Column>
                                             </Column.Group>
@@ -27,7 +27,7 @@ const RegisterScreen = () => {
                                         <Column.Group>
                                             <Column size={12}>
                                             <Title size={6} className="has-text-grey has-text-centered">
-                                                Your notes on the cloud!
+                                                Suas ideias na nuvem!
                                                 </Title>
                                             </Column>
                                         </Column.Group>

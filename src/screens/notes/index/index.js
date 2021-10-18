@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import HeaderLogged from '../../../components/header_logged';
+import HeaderEditor from '../../../components/header_editor';
 import Notes from '../../../components/notes';
 
 const NotesScreen = () => {
@@ -8,7 +9,7 @@ const NotesScreen = () => {
 
     return (
         <Fragment>
-            <HeaderLogged setIsOpen={setIsOpen}/>
+            <HeaderEditor setIsOpen={setIsOpen}/>
             <Notes setIsOpen={setIsOpen} isOpen={isOpen}/>
         </Fragment>
     )

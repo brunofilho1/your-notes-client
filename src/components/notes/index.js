@@ -9,7 +9,6 @@ import NotesService from '../../services/notes';
 
 const Notes = (props) => {
 
-    const [title, setTitle] = useState([])
     const [notes, setNotes] = useState([]);
     const [current_note, setCurrentNote] = useState({title: "", body: "", id: ""});
 
@@ -43,6 +42,10 @@ const Notes = (props) => {
     const deleteNote = async (note) => {
       await NotesService.delete(note._id);
       fetchNotes()
+    }
+
+    const confirmDelete = async () => {
+      
     }
 
     const updateNote = async (oldNote, params) => {

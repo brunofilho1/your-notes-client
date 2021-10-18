@@ -1,4 +1,4 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import {Navbar, Container, Column, Button, Dropdown} from 'rbx';
 import logoImage from '../../assets/images/yourNotes-logo-white.png';
 import '../../styles/header.scss';
@@ -20,7 +20,7 @@ function HeaderLogged(props) {
   
     if (redirectToHome == true)
       return <Redirect to={{ pathname: "/" }} />
-  
+
     return (
       <Navbar color="custom-purple" className="navbar-logged">
         <Navbar.Brand>

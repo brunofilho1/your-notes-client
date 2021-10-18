@@ -7,6 +7,16 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function ListNotes(props) {
 
+  const confirmDelete = (item) => {
+    var confirm = window.confirm('Você deseja apagar permanentemente essa nota?')
+    if(confirm == true) {
+      console.log('Confirmo!');
+      return props.deleteNote(item)
+    } else {
+      console.log('Não confirmo.');
+    }
+  }
+
   return (
     <Fragment>
 {/* 
@@ -55,11 +65,13 @@ function ListNotes(props) {
                   </Column>
                   <Column size={2} offset={1} className="column-trash">
 
-                    <FontAwesomeIcon 
-                      icon={faTrash}
-                      className="trash" 
-                      onClick={() => props.deleteNote(item)} 
-                      color="grey"/>
+                    <a onClick={() => confirmDelete(item)}>
+                      <FontAwesomeIcon 
+                        icon={faTrash}
+                        className="trash" 
+                        /* onClick={() => props.deleteNote(item)}  */
+                        color="grey"/>
+                    </a>
 
                   </Column>
                 </Column.Group>
