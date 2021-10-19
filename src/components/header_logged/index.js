@@ -22,7 +22,7 @@ function HeaderLogged(props) {
       return <Redirect to={{ pathname: "/" }} />
   
     return (
-      <Navbar color="custom-purple" className="navbar-logged">
+      <Navbar background="mixed-colors-auth" className="navbar-logged">
         <Navbar.Brand>
           <Column.Group>
             <Column size="11" offset="1">

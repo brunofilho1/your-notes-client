@@ -2,7 +2,7 @@
 
 nav.navbar {
     height: 70px;
-    border-bottom: 1px solid black;
+    border-bottom: 0px solid $custom-purple;
 
     .navbar-brand {
         img {
@@ -14,8 +14,10 @@ nav.navbar {
 
 .navbar-logged {
     .navbar-menu {
-        background-color: $custom-purple;
+        background: $mixed-colors-auth;
     }
+
+    background: $mixed-colors-auth;
 }
 
 .navbar-menu {

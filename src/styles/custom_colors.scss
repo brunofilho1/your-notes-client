@@ -1,3 +1,14 @@
+$mixed-colors: 
+linear-gradient(45deg,  transparent 0%, transparent 57%, #694ED8 100%),
+linear-gradient(-45deg, #694ED8 0%,  #a73f2f 0.3%, #7423df 112%,  transparent 11% ),
+linear-gradient(-90deg, #694ED8 100%, #694ED8 65%, transparent 20% )
+;
+$mixed-colors-auth: 
+linear-gradient(45deg,  transparent 0%, transparent 57%, #694ED8 100%),
+linear-gradient(-45deg, #694ED8 0%,  #996057 0.3%, #512de0 112%,  transparent 11% ),
+linear-gradient(-90deg, #694ED8 100%, #694ED8 65%, transparent 20% )
+;
+
 $custom-purple: #694ED8;
 $custom-purple-darker: #6600CC;
 $custom-grey: #f3f3f3;

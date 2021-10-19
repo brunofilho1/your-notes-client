@@ -15,14 +15,14 @@ const HomeScreen = () => {
                     <Column.Group>
                         <Column size={5}>
                             <Title size={2} spaced className="has-text-white">
-                                Create notes easily and access when you wants on the cloud
+                                Crie notas facilmente e acesse quando e onde você quiser
                             </Title>
                             <Title size={5} spaced className="has-text-light" subtitle>
-                                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.<br/><br/>
-                                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print.
+                                Com o YourNotes você será capaz de criar anotações online para acessar quando, e de onde você quiser!<br/><br/>
+                                Com um editor fácil e prático você será capaz de editar a fonte, tamanho, formatação do texto e muito mais.
                             </Title>
                             <Link to="/register" className="button is-outlined is-white is-large">
-                                <strong>Register for free Now</strong>
+                                <strong>Registre-se agora</strong>
                             </Link>
                         </Column>
                         <Column size={6} offset={1}>
