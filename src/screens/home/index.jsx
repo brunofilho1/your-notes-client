@@ -4,6 +4,7 @@ import Header from '../../components/header';
 import {Column, Section, Title, Container} from 'rbx';
 import '../../styles/home.scss';
 import '../../styles/transition.scss';
+import '../../styles/waves.scss';
 import {Link} from 'react-router-dom';
 
 import $ from 'jquery'
@@ -17,7 +18,7 @@ const HomeScreen = () => {
             <Header/>
             <Section size="medium" className="home">
                 <Container>
-                    <Column.Group>
+                    <Column.Group className="home-content">
                         <Column size={5}>
                             <Title size={2} spaced className="has-text-white">
                                 Crie notas facilmente e acesse quando e onde você quiser
@@ -35,6 +36,11 @@ const HomeScreen = () => {
                         </Column>
                     </Column.Group>
                 </Container>
+            <section className="waveSection">
+                <div className="wave wave1"></div>
+                <div className="wave wave2"></div>
+                <div className="wave wave3"></div>
+            </section>
             </Section>
 
         </Fragment>

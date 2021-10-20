@@ -3,6 +3,7 @@ import Header from '../../../components/header';
 import { Column, Section, Title, Container, Card } from "rbx";
 import logoImage from '../../../assets/images/yourNotes-logo.png';
 import '../../../styles/auth.scss';
+import '../../../styles/waves.scss';
 import LoginForm from '../../../components/auth/login_form';
 
 const LoginScreen = () => {
@@ -38,6 +39,11 @@ const LoginScreen = () => {
                 </Column>
                 </Column.Group>
             </Container>
+            <section className="waveSection">
+                <div className="wave wave1"></div>
+                <div className="wave wave2"></div>
+                <div className="wave wave3"></div>
+            </section>
             </Section>
         </Fragment>
     )

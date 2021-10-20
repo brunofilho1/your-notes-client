@@ -19,7 +19,7 @@ const NotesScreen = () => {
     )
 }
 
-$(window).on("mouseover", function() {
+$(window).on("load" || "mouseover", function() {
     setTimeout(() => {
         $(".bodyLoading").fadeOut(1000);
     }, 1000);
