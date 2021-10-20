@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
-import {Input, Button} from 'rbx';
+import {Input, Button, Help} from 'rbx';
 
 function Editor({note, updateNote}) {
   const [currentTitle, setCurrentTitle] = useState('');
@@ -17,7 +17,7 @@ function Editor({note, updateNote}) {
     updateNote(note, { title, body });
   }
 
-  function handleChange(content, delta, source) {
+   function handleChange(content, delta, source) {
     clearTimeout(timer);
     if (source === 'user') {
       setCurrentContent(content);
@@ -25,7 +25,7 @@ function Editor({note, updateNote}) {
         handleUpdate(currentTitle, content);
       }, 1000));
     }
-  }
+  } 
 
   const modules = {
     toolbar: [
@@ -48,14 +48,18 @@ function Editor({note, updateNote}) {
         size="large"
         value={currentTitle}
         onChange={(e) => {
-          clearTimeout(timer);
+           clearTimeout(timer); 
           setCurrentTitle(e.target.value);
-          setTimer(setTimeout(() => {
+           setTimer(setTimeout(() => { 
             handleUpdate(e.target.value, currentContent);
-          }, 1000));
-        }}
+           }, 1000)); 
+        }} 
       />
-      <ReactQuill value={currentContent} onChange={handleChange} modules={modules}/>
+      <ReactQuill 
+        value={currentContent} 
+        onChange={handleChange}
+        modules={modules}
+        />
     </Fragment>
   )
 }

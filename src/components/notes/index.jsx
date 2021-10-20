@@ -2,9 +2,9 @@ import React, {Fragment, useEffect, useState} from 'react';
 import '../../styles/notes.scss';
 import {Column, Button} from 'rbx';
 import {push as Menu} from 'react-burger-menu';
-import List from '../notes/list/index';
-import Editor from '../notes/editor';
-import Search from '../notes/search';
+import List from './list/index';
+import Editor from './editor';
+import Search from './search';
 import NotesService from '../../services/notes';
 
 const Notes = (props) => {
@@ -12,11 +12,6 @@ const Notes = (props) => {
     const [notes, setNotes] = useState([]);
     const [current_note, setCurrentNote] = useState({title: "", body: "", id: ""});
 
- /*    async function findTitle() {
-        var titleName = document.querySelector('.ql-editor').firstChild.textContent
-        console.log(titleName);
-    }
- */
     async function fetchNotes() {
         const response = await NotesService.index();
         if(response.data.length >= 1) {
@@ -42,10 +37,6 @@ const Notes = (props) => {
     const deleteNote = async (note) => {
       await NotesService.delete(note._id);
       fetchNotes()
-    }
-
-    const confirmDelete = async () => {
-      
     }
 
     const updateNote = async (oldNote, params) => {

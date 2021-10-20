@@ -1,0 +1,32 @@
+@import "./custom_colors.scss";
+
+.bodyLoading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $mixed-colors;
+    z-index: 99;
+}
+
+.loadingTransitionDiv {
+    display: inline-block;
+    position: relative;
+    animation: is-rotating 1s infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid #e5e5e5;
+    border-top-color: $custom-purple;
+    
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn)
+    }
+}

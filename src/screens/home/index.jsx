@@ -3,13 +3,18 @@ import presentationImage from '../../assets/images/presentation.png';
 import Header from '../../components/header';
 import {Column, Section, Title, Container} from 'rbx';
 import '../../styles/home.scss';
+import '../../styles/transition.scss';
 import {Link} from 'react-router-dom';
+
+import $ from 'jquery'
 
 const HomeScreen = () => {
     return (
         <Fragment>
+            <div className="bodyLoading">
+                <div className="loadingTransitionDiv"></div>
+            </div>
             <Header/>
-
             <Section size="medium" className="home">
                 <Container>
                     <Column.Group>
@@ -35,5 +40,12 @@ const HomeScreen = () => {
         </Fragment>
     )
 }
+
+$(window).on("mouseover", function() {
+    setTimeout(() => {
+        $(".bodyLoading").fadeOut(1000);
+    }, 1500);
+});
+
 
 export default HomeScreen;
