@@ -35,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [MongoDB](https://www.mongodb.com/)
 - [JavaScript](https://www.javascript.com/)
 
-## 📎 Clone a aplicação
+## 🔗  Clone a aplicação
 
 Clone o projeto e acesse a pasta do mesmo.
 
