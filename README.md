@@ -40,8 +40,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/brunofilho1/javascript-notes-client/
-$ cd javascript-notes-client
+$ git clone https://github.com/brunofilho1/your-notes-client/
+$ cd your-notes-client
 ```
 ## 🚀 Como iniciar a aplicação
 
@@ -54,7 +54,7 @@ $ yarn start
 ```
 O app estará disponível no seu browser pelo http://localhost:3000 assim que iniciado.
 
-Mas lembre-se de também iniciar a [API](https://github.com/brunofilho1/javascript-notes-api) para conseguir realizar ações no site, como criar sua conta 
+Mas lembre-se de também iniciar a [API](https://github.com/brunofilho1/your-notes-api) para conseguir realizar ações no site, como criar sua conta 
 e usar o editor de notas.
 
 <h1 align="center">
